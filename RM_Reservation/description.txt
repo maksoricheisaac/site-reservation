@@ -1,0 +1,44 @@
+J'ai développé ce site web pour la réservation de billets de bus en PHP. Mon site permet aux utilisateurs de s'inscrire, de réserver des billets pour différents trajets proposés par des agences locales, de sélectionner leur mode de paiement, et enfin, de confirmer leur réservation.
+
+### Développement d'un Site de Réservation de Billets de Bus en PHP
+
+#### Authentification et Gestion des Sessions
+
+- **Gestion de l'Authentification** :
+  - Utilisation de `session_start()` pour gérer les sessions des utilisateurs.
+  - Redirection vers la page de connexion (`login.php`) si l'utilisateur n'est pas connecté (`$_SESSION['user_id']` non défini).
+  
+#### Sécurisation avec PDO
+
+- **Utilisation de PDO pour la Sécurité** :
+  - Utilisation de requêtes préparées avec PDO (`prepare()`, `bindValue()`, `execute()`) pour prévenir les attaques par injection SQL.
+  - Séparation des instructions SQL des données utilisateur pour assurer la sécurité et l'intégrité des données.
+
+#### Gestion des Erreurs et Messages Utilisateur
+
+- **Validation des Champs de Formulaire** :
+  - Vérification côté serveur pour s'assurer que tous les champs du formulaire sont remplis (`empty()`).
+  - Validation de l'adresse email avec `FILTER_VALIDATE_EMAIL`.
+  - Affichage de messages d'erreur personnalisés (`$error`) en cas de problème de formulaire.
+
+#### Conception de la Base de Données
+
+- **Structure de la Base de Données** :
+  - Tables telles que `user`, `agency`, `route`, `ticket`, et `payment_mode` pour gérer les utilisateurs, les agences, les trajets, les réservations de billets, et les modes de paiement.
+  - Relations appropriées entre les tables pour faciliter la récupération et l'affichage des informations pertinentes.
+
+#### Expérience Utilisateur et Sécurité
+
+- **Sécurité et Convivialité** :
+  - Garantie d'une expérience utilisateur sécurisée et fluide tout au long du processus de réservation.
+  - Mise en œuvre de bonnes pratiques de développement PHP pour assurer la robustesse et la fiabilité de chaque fonctionnalité.
+
+#### Apprentissage et Croissance
+
+- **Défis Rencontrés et Apprentissage** :
+  - Chaque défi rencontré a été une opportunité d'apprentissage et de croissance en matière de développement web.
+  - Amélioration continue des compétences grâce à la résolution de problèmes et à l'optimisation des fonctionnalités du site.
+
+---
+
+En développant ce site de réservation de billets de bus, j'ai pu non seulement mettre en pratique mes compétences en PHP et en gestion de base de données, mais aussi approfondir ma compréhension des bonnes pratiques de sécurité et de convivialité. Chaque aspect du projet a été pensé pour offrir aux utilisateurs une expérience fiable et sécurisée, tout en me permettant de progresser dans mon parcours de développement web.
